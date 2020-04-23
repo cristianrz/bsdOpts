@@ -17,10 +17,6 @@ args := make(bsdOpts.Opts)
 Define each flags default value as 
 
 ```
-
-Define each flags default value as
-
-```
 args['b'] = false
 args['i'] = 3
 args['f'] = file.txt
