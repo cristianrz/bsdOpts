@@ -34,30 +34,29 @@ type Opts map[rune]interface{}
 
 // Parse parses the command-line options from os.Args[1:].
 func (m Opts) Parse() error {
-	var lastOpt rune
-	var expectingString = false
+	var (
+		lastOpt rune
+		expectingString = false
+	)
 
 	os.Args = os.Args[1:]
 	argv := len(os.Args)
 
 	for i := 0; i < argv; i++ {
 		arg := os.Args[0]
-		//expectedArg := fmt.Sprintf("%T", m[lastOpt])
 
-		if expectingString == true {
+		if expectingString {
 			m[lastOpt] = arg
 			expectingString = false
 		} else if arg[0] == '-' {
 			arg = arg[1:]
 
 			for j, opt := range arg {
-				_, ok := m[opt]
-				if !ok {
+				if _, ok := m[opt]; !ok {
 					return errors.New("unknown option -- " + string(opt))
 				}
 
-				valueType := fmt.Sprintf("%T", m[opt])
-				switch valueType {
+				switch valueType := fmt.Sprintf("%T", m[opt]); valueType {
 				case "bool":
 					m[opt] = true
 				case "string":
@@ -67,9 +66,7 @@ func (m Opts) Parse() error {
 						expectingString = true
 						lastOpt = opt
 					}
-
 				}
-
 			}
 		} else {
 			return nil
