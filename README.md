@@ -1,4 +1,4 @@
-#bsdOpts
+# bsdOpts
 
 [![GoDoc](https://godoc.org/github.com/cristianrz/bsdOpts?status.svg)](https://godoc.org/github.com/cristianrz/bsdOpts)
 
