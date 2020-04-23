@@ -1,8 +1,8 @@
-package bsdOpts_test
+package BSDOpts_test
 
 import (
 	"fmt"
-	"github.com/cristianrz/bsdOpts"
+	"github.com/cristianrz/BSDOpts"
 	"os"
 	"path"
 	"testing"
@@ -16,7 +16,7 @@ func TestAll(t *testing.T) {
 	fmt.Printf("INITIAL\n\n")
 	fmt.Println(os.Args)
 
-	args := make(bsdOpts.Opts)
+	args := make(BSDOpts.Opts)
 
 	args['a'] = false
 	args['b'] = false

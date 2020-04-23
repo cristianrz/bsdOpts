@@ -1,6 +1,6 @@
-# bsdOpts [![GoDoc](https://godoc.org/github.com/cristianrz/bsdOpts?status.svg)](https://godoc.org/github.com/cristianrz/bsdOpts)
+# BSDOpts [![GoDoc](https://godoc.org/github.com/cristianrz/BSDOpts?status.svg)](https://godoc.org/github.com/cristianrz/BSDOpts)
 
-Package bsdOpts implements BSD-style command-line flag parsing in less than
+Package BSDOpts implements BSD-style command-line flag parsing in less than
 50 lines of code.
 
 ## Installation
@@ -8,7 +8,7 @@ Package bsdOpts implements BSD-style command-line flag parsing in less than
 Install with 
 
 ```
-go get github.com/cristianrz/bsdOpts
+go get github.com/cristianrz/BSDOpts
 ```
 
 ## Usage
@@ -16,13 +16,13 @@ go get github.com/cristianrz/bsdOpts
 Import with
 
 ```
-import "github.com/cristianrz/bsdOpts"`
+import "github.com/cristianrz/BSDOpts"`
 ```
 
 Create a set of flags using 
 
 ```
-args := make(bsdOpts.Opts)
+args := make(BSDOpts.Opts)
 ```
 
 Define each flags default value as 

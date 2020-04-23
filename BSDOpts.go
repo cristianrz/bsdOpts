@@ -2,13 +2,13 @@
 // License can be found in the LICENSE file.
 
 /*
-Package bsdOpts implements BSD-style command-line flag parsing.
+Package BSDOpts implements BSD-style command-line flag parsing.
 
 Usage
 
 Create a set of flags using
 
-	args := make(bsdOpts.Opts)
+	args := make(BSDOpts.Opts)
 
 Define each flags default value as
 
@@ -21,7 +21,7 @@ Parse with
 	args.Parse()
 
 */
-package bsdOpts
+package BSDOpts
 
 import (
 	"errors"
